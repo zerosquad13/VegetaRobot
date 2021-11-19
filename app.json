@@ -1,13 +1,13 @@
 {
-       "name": "Vegeta",
+       "name": "Zeus",
       "description": "An Anime themed Telegram group management bot.",
-      "logo": "https://telegra.ph/file/279aabde88baf84afeaee.jpg",
+      "logo": "https://telegra.ph/file/ba1a1b1bfa6007af5946e.jpg",
       "keywords": [
          "telegram",
          "anime",
          "group",
          "manager",
-         "Vegeta"
+         "Zeus"
       ],   
    "repository": "https://github.com/ctzfamily/vegetarobot",
    "addons": [
