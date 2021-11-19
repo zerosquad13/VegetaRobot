@@ -77,7 +77,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
- ───『[THE GOD OF ZEUS](https://telegra.ph/file/0c48783bf8a446a82b30d.jpg)』───
+ ───『[THE GOD OF ZEUS](https://telegra.ph/file/5f296f959250d7cd88b09.jpg)』───
 Hello! User,👋
 I am *Zeus*
 ➪ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴡɪᴛʜ ᴇxᴘʟᴏsɪᴠᴇ.
@@ -125,8 +125,8 @@ List of all the Modules:
 )
 
 HELP_MSG = "Click the button below to get help manu in your pm."
-DONATE_STRING = """Contact to **@PegasusSupportofficial**"""
-HELP_IMG= "https://telegra.ph/file/9d2c6e3b28afe7619856e.jpg"
+DONATE_STRING = """Contact to **@ZeusSupportChat**"""
+HELP_IMG= "https://telegra.ph/file/5f296f959250d7cd88b09.jpg"
 GROUPSTART_IMG= "https://telegra.ph/file/374d0887609fc70e093bd.mp4"
 
 
