@@ -77,9 +77,9 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
- ───『[Vegeta The Robot](https://telegra.ph/file/0c48783bf8a446a82b30d.jpg)』───
+ ───『[THE GOD OF ZEUS](https://telegra.ph/file/0c48783bf8a446a82b30d.jpg)』───
 Hello! User,👋
-I am *Vegeta*
+I am *Zeus*
 ➪ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴡɪᴛʜ ᴇxᴘʟᴏsɪᴠᴇ.
 ┏━━━━━━━━━━━━━━━━━━━━━┓
 ┃➪ ᴄʟɪᴄᴋ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ʜᴇʟᴘ ᴛᴏ ┃ᴇxᴘʟᴏʀᴇ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ᴍᴇ ᴀɴᴅ ᴍʏ ┃ғᴇᴀᴛᴜʀᴇs.
@@ -90,12 +90,12 @@ buttons = [
     [
         InlineKeyboardButton(
                             text="➕ Add Me ➕",
-                            url="t.me/VegetaRobot?startgroup=true"),
-                       InlineKeyboardButton(text="❤Bot Support", url="t.me/vegetaSupport"),
+                            url="t.me/ZeusXRobot?startgroup=true"),
+                       InlineKeyboardButton(text="⚡ZeusSupport", url="t.me/ZeusSupportchat"),
                     ],
                    [
                        InlineKeyboardButton(text="🔐 Help ", callback_data="help_back"),
-                       InlineKeyboardButton(text="📊 Network", url="t.me/pegasusXteam"),
+                       InlineKeyboardButton(text="📊 Network", url="t.me/PegasusXteam"),
                        InlineKeyboardButton(text="🔔 Logs", url="t.me/pegasusLogs"),
                      ],
                     [                  
@@ -104,13 +104,13 @@ buttons = [
                              url=f"https://t.me/{SUPPORT_CHAT}"),
                        InlineKeyboardButton(
                              text="📢 Updates",
-                             url="https://t.me/PegasusUpdates"
+                             url="https://t.me/ZeusUpdates"
          ),
     ],
 ] 
 
 HELP_STRINGS = """
-Hey there, I'm *Vegeta*!
+Hey there, I'm *Zeus*!
 To make me functional, make sure that i have enough rights in your group.
 Helpful commands:
 - /start: Starts me! You've probably already used this.
@@ -239,7 +239,7 @@ def start(update: Update, context: CallbackContext):
     else:
         first_name = update.effective_user.first_name
         update.effective_message.reply_video(
-            GROUPSTART_IMG, caption= "*hey {},*\n*Vegeta Here For You*\n*I'm Working* : {} ".format(
+            GROUPSTART_IMG, caption= "*hey {},*\n*Zeus Here For You*\n*I'm Working* : {} ".format(
              first_name,uptime
             ),
             parse_mode=ParseMode.MARKDOWN,
@@ -247,7 +247,7 @@ def start(update: Update, context: CallbackContext):
                 [
                   [
                   InlineKeyboardButton(text=" Support ", url=f"https://telegram.dog/{SUPPORT_CHAT}"),
-                  InlineKeyboardButton(text=" Updates ", url=f"t.me/pegasusUpdates"),
+                  InlineKeyboardButton(text=" Updates ", url=f"t.me/ZeusUpdates"),
                   ]
                 ]
             ),
@@ -724,7 +724,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info("Vegeta is now alive and functioning")
+        LOGGER.info("Zeus is now alive and functioning")
         updater.start_polling(timeout=15, read_latency=4, clean=True)
 
     if len(argv) not in (1, 3, 4):
