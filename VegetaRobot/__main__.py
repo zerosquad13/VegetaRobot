@@ -127,7 +127,7 @@ List of all the Modules:
 HELP_MSG = "Click the button below to get help manu in your pm."
 DONATE_STRING = """Contact to **@ZeusSupportChat**"""
 HELP_IMG= "https://telegra.ph/file/5f296f959250d7cd88b09.jpg"
-GROUPSTART_IMG= "https://telegra.ph/file/374d0887609fc70e093bd.mp4"
+GROUPSTART_IMG= "https://telegra.ph/file/ba1a1b1bfa6007af5946e.jpg"
 
 
 
@@ -238,7 +238,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         first_name = update.effective_user.first_name
-        update.effective_message.reply_video(
+        update.effective_message.reply_photo(
             GROUPSTART_IMG, caption= "*hey {},*\n*Zeus Here For You*\n*I'm Working* : {} ".format(
              first_name,uptime
             ),
@@ -681,7 +681,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@VegetaSupport","[Back Online (:](https://telegra.ph/file/d3db0babad0d1729c5f59.jpg)", parse_mode=ParseMode.MARKDOWN) 
+            dispatcher.bot.sendMessage(f"@ZeusSupportChat","**Zesu** Back Online (:", parse_mode=ParseMode.MARKDOWN) 
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!",
