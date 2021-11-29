@@ -1,5 +1,4 @@
 import importlib
-import random
 import time
 import re
 from sys import argv
@@ -78,61 +77,55 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
- ───『[Vegeta The Robot](https://telegra.ph/file/0c48783bf8a446a82b30d.jpg)』───
-Hello! User,👋
-I am *Vegeta*
+ ─────『[SINNER XXX](https://telegra.ph/file/26bb7cc86a256fd266bee.jpg)』─────
+Hᴇʟʟᴏ! Usᴇʀ,🍻 I ᴀᴍ *𝐒ɪɴɴᴇʀ*
 ➪ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴡɪᴛʜ ᴇxᴘʟᴏsɪᴠᴇ.
-┏━━━━━━━━━━━━━━━━━━━━━┓
+┏━━━━━━━━━━━━━━━━┓
 ┃➪ ᴄʟɪᴄᴋ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ʜᴇʟᴘ ᴛᴏ ┃ᴇxᴘʟᴏʀᴇ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ᴍᴇ ᴀɴᴅ ᴍʏ ┃ғᴇᴀᴛᴜʀᴇs.
-┗━━━━━━━━━━━━━━━━━━━━━┛
+┗━━━━━━━━━━━━━━━━┛
 """
-PMSTART_CHAT = (
-    "[I defect you friza....heeeheee!!!](https://telegra.ph/file/277fdd6886a4fc9c1d854.jpg)",
-    "[I'm Prince Vegeta I Hope Your Planets](https://telegra.ph/file/9aed3b24431552db6d87d.jpg)",
-    "[Dont Teach My Family 🔥](https://telegra.ph/file/bd5f26483bae7d400ec7e.jpg)",
-    "[kaaaameeeee kaaaameee boommmm!!!!](https://telegra.ph/file/adfffdc36ff4303eb7523.jpg)", )
+
+VEGETA_IMG = "https://telegra.ph/file/26bb7cc86a256fd266bee.jpg"
 
 buttons = [
     [
         InlineKeyboardButton(
-                            text="☑ Add Vegeta to group ☑",
-                            url="t.me/VegetaRobot?startgroup=true"),
+                            text="🜏 ᴀᴅᴅ 𝐒ɪɴɴᴇʀ ᴛᴏ ɢʀᴏᴜᴘ 🜏",
+                            url="t.me/sinnerXzero_bot?startgroup=true"),
                     ],
                    [
-                       InlineKeyboardButton(text="🔐 Help ", callback_data="help_back"),
-                       InlineKeyboardButton(text="📊 Network", url="t.me/pegasusXteam"),
-                       InlineKeyboardButton(text="🔔 Logs", url="t.me/pegasusLogs"),
+                       InlineKeyboardButton(text="🜏 ʜᴇʟᴘ 🜏", callback_data="help_back"),
+                       InlineKeyboardButton(text="ɴᴇᴛᴡᴏʀᴋ", url="t.me/xproject13"),
+                       InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url="t.me/lifeinsinn"),
                      ],
                     [                  
                        InlineKeyboardButton(
-                             text="🗯 Support",
+                             text="🜏 sᴜᴘᴘᴏʀᴛ 🜏",
                              url=f"https://t.me/{SUPPORT_CHAT}"),
                        InlineKeyboardButton(
-                             text="📢 Updates",
+                             text="🜏 ɢʀᴏᴜᴘ 🜏",
                              url=f"https://t.me/{UPDATES_CHANNEL}"
          ),
     ],
 ] 
 
 HELP_STRINGS = """
-Hey there, I'm *Vegeta*!
-To make me functional, make sure that i have enough rights in your group.
-Helpful commands:
-- /start: Starts me! You've probably already used this.
-- /help: Sends this message; I'll tell you more about myself!
-- /donate: Gives you info on how to support me and my creator.
-If you want to report bugs or have any questions on how to use me then feel free to reach out: @VegetaSupport.
-All commands can be used with the following: [(/),(!),(?),(.),(~)](https://telegra.ph/file/561fa547f3c4940c95ddf.jpg)
-List of all the Modules:
+Hᴇʏ ᴛʜᴇʀᴇ, I'ᴍ *𝐒ɪɴɴᴇʀ*!
+Tᴏ ᴍᴀᴋᴇ ᴍᴇ ғᴜɴᴄᴛɪᴏɴᴀʟ, ᴍᴀᴋᴇ sᴜʀᴇ ᴛʜᴀᴛ ɪ ʜᴀᴠᴇ ᴇɴᴏᴜɢʜ ʀɪɢʜᴛs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ.
+Hᴇʟᴘғᴜʟ ᴄᴏᴍᴍᴀɴᴅs:
+- /start: Sᴛᴀʀᴛs ᴍᴇ! Yᴏᴜ'ᴠᴇ ᴘʀᴏʙᴀʙʟʏ ᴀʟʀᴇᴀᴅʏ ᴜsᴇᴅ ᴛʜɪs.
+- /help: Sᴇɴᴅs ᴛʜɪs ᴍᴇssᴀɢᴇ; I'ʟʟ ᴛᴇʟʟ ʏᴏᴜ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ᴍʏsᴇʟғ!
+Aʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ ᴛʜᴇ ғᴏʟʟᴏᴡɪɴɢ: [(/),(!),(?),(.),(~)](https://telegra.ph/file/da71798799c21289629f1.png)
+Lɪsᴛ ᴏғ ᴀʟʟ ᴛʜᴇ Mᴏᴅᴜʟᴇs:
 """.format(
     dispatcher.bot.first_name,
     "" if not ALLOW_EXCL else "📝All commands can either be used with / or !.",
 )
 
 HELP_MSG = "Click the button below to get help manu in your pm."
-DONATE_STRING = """Contact to **@PegasusSupportofficial**"""
-HELP_IMG= "https://telegra.ph/file/9d2c6e3b28afe7619856e.jpg"
-GROUPSTART_IMG= "https://telegra.ph/file/374d0887609fc70e093bd.mp4"
+DONATE_STRING = """Contact to @xproject13"""
+HELP_IMG= "https://telegra.ph/file/26bb7cc86a256fd266bee.jpg"
+GROUPSTART_IMG= "https://telegra.ph/file/26bb7cc86a256fd266bee.jpg"
 
 
 
@@ -197,7 +190,7 @@ def send_help(chat_id, text, keyboard=None):
 
 def test(update: Update, context: CallbackContext):
     # pprint(eval(str(update)))
-    # update.effective_message.reply_text("Hola tester! _I_ *have* `markdown`", parse_mode=ParseMode.MARKDOWN)
+    # update.effective_message.reply_text("Hola tester! _I_ *have* markdown", parse_mode=ParseMode.MARKDOWN)
     update.effective_message.reply_text("This person edited a message")
     print(update.effective_message)
 
@@ -218,7 +211,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="⬅Back", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="⬅ʙᴀᴄᴋ", callback_data="help_back")]]
                     ),
                 )
 
@@ -236,11 +229,6 @@ def start(update: Update, context: CallbackContext):
 
         else:
             update.effective_message.reply_text(
-                random.choice(PMSTART_CHAT),
-                parse_mode=ParseMode.MARKDOWN,
-                timeout=60,
-            )
-            update.effective_message.reply_text(
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
@@ -249,15 +237,16 @@ def start(update: Update, context: CallbackContext):
     else:
         first_name = update.effective_user.first_name
         update.effective_message.reply_video(
-            GROUPSTART_IMG, caption= "*hey {},*\n*Vegeta Here For You*\n*I'm Working* : {} ".format(
-             first_name,uptime
+            GROUPSTART_IMG, caption= "*hey {},*\n*Sinner Here For You*\n*I'm Working* : {} ".format(
+
+first_name,uptime
             ),
             parse_mode=ParseMode.MARKDOWN,
         reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                  InlineKeyboardButton(text=" Support ", url=f"https://telegram.dog/{SUPPORT_CHAT}"),
-                  InlineKeyboardButton(text=" Updates ", url=f"t.me/VegetaUpdates"),
+                  InlineKeyboardButton(text=" sᴜᴘᴘᴏʀᴛ ", url=f"https://telegram.dog/{SUPPORT_CHAT}"),
+                  InlineKeyboardButton(text=" ᴜᴘᴅᴀᴛᴇ ", url=f"t.me/xproject13"),
                   ]
                 ]
             ),
@@ -346,8 +335,8 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="⬅ Back", callback_data="help_back"),
-                      InlineKeyboardButton(text="⬅ Home", callback_data="vegeta_back")]]
+                    [[InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="help_back"),
+                      InlineKeyboardButton(text="ʜᴏᴍᴇ", callback_data="vegeta_back")]]
                 ),
             )
 
@@ -361,7 +350,7 @@ def help_button(update, context):
                 ),
             )
 
-        elif next_match:
+elif next_match:
             next_page = int(next_match.group(1))
             query.message.edit_text(
                 text=HELP_STRINGS,
@@ -399,7 +388,7 @@ def vegeta_data_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Back", callback_data="vegeta_back")
+                    InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="vegeta_back")
                  ]
                 ]
             ),
@@ -467,7 +456,7 @@ def get_help(update: Update, context: CallbackContext):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
+                [[InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="help_back")]]
             ),
         )
 
@@ -488,7 +477,7 @@ def send_settings(chat_id, user_id, user=False):
                 parse_mode=ParseMode.MARKDOWN,
             )
 
-        else:
+else:
             dispatcher.bot.send_message(
                 user_id,
                 "Seems like there aren't any user specific settings available :'(",
@@ -540,7 +529,7 @@ def settings_button(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Back",
+                                text="ʙᴀᴄᴋ",
                                 callback_data="stngs_back({})".format(chat_id),
                             )
                         ]
@@ -588,7 +577,7 @@ def settings_button(update: Update, context: CallbackContext):
                 ),
             )
 
-        # ensure no spinny white circle
+# ensure no spinny white circle
         bot.answer_callback_query(query.id)
         query.message.delete()
     except BadRequest as excp:
@@ -692,7 +681,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}","[SUPER SAIYAN VEGETA IS BACK](https://telegra.ph/file/d3db0babad0d1729c5f59.jpg)", parse_mode=ParseMode.MARKDOWN) 
+            dispatcher.bot.sendMessage(f"@xproject13","[Back Online (:](https://telegra.ph/file/26bb7cc86a256fd266bee.jpg)", parse_mode=ParseMode.MARKDOWN) 
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!",
@@ -709,7 +698,7 @@ def main():
     settings_handler = CommandHandler("settings", get_settings)
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
 
-    data_callback_handler = CallbackQueryHandler(vegeta_data_callback, pattern=r"vegeta_")
+data_callback_handler = CallbackQueryHandler(vegeta_data_callback, pattern=r"vegeta_")
     donate_handler = CommandHandler("donate", donate)
     migrate_handler = MessageHandler(Filters.status_update.migrate, migrate_chats)
 
@@ -746,7 +735,7 @@ def main():
     updater.idle()
 
 
-if __name__ == '__main__':
+if name == '__main__':
     LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
     telethn.start(bot_token=TOKEN)
     main()
