@@ -86,7 +86,8 @@ Hᴇʟʟᴏ! Usᴇʀ,🍻 I ᴀᴍ *𝐒ɪɴɴᴇʀ*
 ┗━━━━━━━━━━━━━━━━┛
 """
 
-VEGETA_IMG = "https://telegra.ph/file/26bb7cc86a256fd266bee.jpg"
+PMSTART_CHAT = (
+    "[🜏 ᴡᴇʟᴄᴏᴍᴇ ᴀɴᴅ ᴇɴᴊᴏʏ 🜏](https://telegra.ph/file/da71798799c21289629f1.png)",)
 
 buttons = [
     [
