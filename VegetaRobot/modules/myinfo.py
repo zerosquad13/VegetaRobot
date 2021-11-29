@@ -65,7 +65,7 @@ async def callback_query_handler(event):
   try:
     boy = event.sender_id
     PRO = await bot.get_entity(boy)
-    LILIE = "POWERED BY UNITED \n\n"
+    LILIE = "POWERED BY SINNER \n\n"
     LILIE += f"FIRST NAME : {PRO.first_name} \n"
     LILIE += f"LAST NAME : {PRO.last_name}\n"
     LILIE += f"YOU BOT : {PRO.bot} \n"
