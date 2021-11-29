@@ -103,10 +103,10 @@ buttons = [
                     [                  
                        InlineKeyboardButton(
                              text="🜏 sᴜᴘᴘᴏʀᴛ 🜏",
-                             url=f"https://t.me/{SUPPORT_CHAT}"),
+                             url=f"https://t.me/badgurls18plus"),
                        InlineKeyboardButton(
                              text="🜏 ɢʀᴏᴜᴘ 🜏",
-                             url=f"https://t.me/{UPDATES_CHANNEL}"
+                             url=f"https://t.me/xxxsquad18plus"
          ),
     ],
 ] 
@@ -687,7 +687,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}","[SUPER SAIYAN VEGETA IS BACK](https://telegra.ph/file/d3db0babad0d1729c5f59.jpg)", parse_mode=ParseMode.MARKDOWN) 
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}","[SINNER ASSISTANT IS BACK](https://telegra.ph/file/da71798799c21289629f1.png)", parse_mode=ParseMode.MARKDOWN) 
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!",
