@@ -96,7 +96,7 @@ buttons = [
                             url="t.me/sinnerXzero_bot?startgroup=true"),
                     ],
                    [
-                       InlineKeyboardButton(text="🜏 ʜᴇʟᴘ 🜏", callback_data="help_back"),
+                       InlineKeyboardButton(text="ʜᴇʟᴘ", callback_data="help_back"),
                        InlineKeyboardButton(text="ɴᴇᴛᴡᴏʀᴋ", url="t.me/xproject13"),
                        InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url="t.me/lifeinsinn"),
                      ],
@@ -126,8 +126,8 @@ Lɪsᴛ ᴏғ ᴀʟʟ ᴛʜᴇ Mᴏᴅᴜʟᴇs:
 
 HELP_MSG = "Click the button below to get help manu in your pm."
 DONATE_STRING = """Contact to **@PegasusSupportofficial**"""
-HELP_IMG= "https://telegra.ph/file/9d2c6e3b28afe7619856e.jpg"
-GROUPSTART_IMG= "https://telegra.ph/file/374d0887609fc70e093bd.mp4"
+HELP_IMG= "https://telegra.ph/file/4d33f8bf67543401dabd1.jpg"
+GROUPSTART_IMG= "https://telegra.ph/file/4d33f8bf67543401dabd1.jpg"
 
 
 
