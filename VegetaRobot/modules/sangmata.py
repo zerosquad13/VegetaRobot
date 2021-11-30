@@ -1,7 +1,7 @@
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from VegetaRobot import telethn as tbot
 from VegetaRobot.events import register
-from VegetaRobot import ubot2 as ubot
+from VegetaRobot import telethn as ubot
 from asyncio.exceptions import TimeoutError
 
 
