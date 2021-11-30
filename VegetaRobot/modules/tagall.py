@@ -58,7 +58,7 @@ async def mentionall(event):
 
 # Cancle 
 
-@telethn.on(events.NewMessage(pattern="^/cancel?(.*)"))
+@telethn.on(events.NewMessage(pattern="^/cancel$"))
 async def cancel_spam(event):
   if not event.chat_id in spam_chats:
     return await event.respond('__There is no proccess on going...__')
