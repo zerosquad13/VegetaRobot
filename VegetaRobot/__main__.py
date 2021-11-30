@@ -79,7 +79,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
  ─────『[SINNER XXX](https://telegra.ph/file/26bb7cc86a256fd266bee.jpg)』─────
-Hᴇʟʟᴏ! Usᴇʀ,🍻 I ᴀᴍ *𝐒ɪɴɴᴇʀ*
+Hᴇʟʟᴏ! Usᴇʀ,🍻 I ᴀᴍ *〝ⵢɪɴɴᴇʀ〞*
 ➪ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ᴀᴅᴍɪɴ ᴛᴏ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴡɪᴛʜ ᴇxᴘʟᴏsɪᴠᴇ.
 ┏━━━━━━━━━━━━━━━━┓
 ┃➪ ᴄʟɪᴄᴋ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ʜᴇʟᴘ ᴛᴏ ┃ᴇxᴘʟᴏʀᴇ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ᴍᴇ ᴀɴᴅ ᴍʏ ┃ғᴇᴀᴛᴜʀᴇs.
@@ -92,13 +92,13 @@ PMSTART_CHAT = (
 buttons = [
     [
         InlineKeyboardButton(
-                            text="🜏 ᴀᴅᴅ 𝐒ɪɴɴᴇʀ ᴛᴏ ɢʀᴏᴜᴘ 🜏",
+                            text="🖤 𝐀𝐃𝐃 𝐒𝐈𝐍𝐍𝐄𝐑 𝐓𝐎 𝐆𝐑𝐎𝐔𝐏 🖤",
                             url="t.me/sinnerXzero_bot?startgroup=true"),
                     ],
                    [
-                       InlineKeyboardButton(text="ʜᴇʟᴘ", callback_data="help_back"),
+                       InlineKeyboardButton(text="〝ʜᴇʟᴘ〞", callback_data="help_back"),
                        InlineKeyboardButton(text="ɴᴇᴛᴡᴏʀᴋ", url="t.me/xproject13"),
-                       InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url="t.me/lifeinsinn"),
+                       InlineKeyboardButton(text="〝ⵢɪɴɴᴇʀ〞", url="t.me/lifeinsinn"),
                      ],
                     [                  
                        InlineKeyboardButton(
@@ -112,7 +112,7 @@ buttons = [
 ] 
 
 HELP_STRINGS = """
-Hᴇʏ ᴛʜᴇʀᴇ, I'ᴍ *𝐒ɪɴɴᴇʀ*!
+Hᴇʏ ᴛʜᴇʀᴇ, I'ᴍ *〝ⵢɪɴɴᴇʀ〞*!
 Tᴏ ᴍᴀᴋᴇ ᴍᴇ ғᴜɴᴄᴛɪᴏɴᴀʟ, ᴍᴀᴋᴇ sᴜʀᴇ ᴛʜᴀᴛ ɪ ʜᴀᴠᴇ ᴇɴᴏᴜɢʜ ʀɪɢʜᴛs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ.
 Hᴇʟᴘғᴜʟ ᴄᴏᴍᴍᴀɴᴅs:
 - /start: Sᴛᴀʀᴛs ᴍᴇ! Yᴏᴜ'ᴠᴇ ᴘʀᴏʙᴀʙʟʏ ᴀʟʀᴇᴀᴅʏ ᴜsᴇᴅ ᴛʜɪs.
@@ -213,7 +213,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="⬅Back", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="🔺Back", callback_data="help_back")]]
                     ),
                 )
 
@@ -341,8 +341,8 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="⬅ Back", callback_data="help_back"),
-                      InlineKeyboardButton(text="⬅ Home", callback_data="vegeta_back")]]
+                    [[InlineKeyboardButton(text="🔺 Back", callback_data="help_back"),
+                      InlineKeyboardButton(text="🔻 Home", callback_data="vegeta_back")]]
                 ),
             )
 
