@@ -71,9 +71,9 @@ async def cancel_spam(event):
         
 
         
-    print("Started Successfully Join Support")
-    print("¯\_(ツ)_/¯ Need Help Join @xproject13")
-    telethn.run_until_disconnected()   
+ print("Started Successfully Join Support")
+ print("¯\_(ツ)_/¯ Need Help Join @xproject13")
+ telethn.run_until_disconnected()   
         
 
 #© @pegasusXteam
