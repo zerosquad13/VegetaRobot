@@ -71,7 +71,4 @@ async def cancel_spam(event):
         
 
         
- telethn.run_until_disconnected()   
-        
-
 #© @pegasusXteam
